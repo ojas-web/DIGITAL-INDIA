@@ -1,0 +1,252 @@
+<!DOCTYPE html>
+<html lang="en" data-theme="dark">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<title>DIGITAL INDIA — Power to Empower</title>
+<meta name="description" content="An independent, educational Digital India experience: services, journey, regional explorer, cyber safety and a knowledge challenge.">
+<style>
+:root{--bg:#07111f;--bg2:#0a1424;--surf:#101e31;--fg:#f4f7fb;--mut:#a6b4c8;--card:#101e31;--bd:rgba(166,180,200,.18);--cy:#58d8ff;--sf:#ff9933;--gr:#3cc45a;--r:14px;--ease:cubic-bezier(.2,.7,.2,1);--sp:clamp(4rem,9vw,8rem);--fs:"Iowan Old Style","Palatino Linotype",Georgia,serif;--fb:system-ui,-apple-system,"Segoe UI",Roboto,sans-serif;--sh:0 18px 40px -22px rgba(0,0,0,.8)}
+[data-theme=light]{--bg:#f4f7fb;--bg2:#e8eef8;--surf:#fff;--fg:#07111f;--mut:#40506b;--card:#fff;--bd:rgba(7,17,31,.16);--cy:#006f91;--sf:#b85500;--gr:#0d7a20;--sh:0 14px 30px -20px rgba(7,17,31,.4)}
+*{box-sizing:border-box}html{scroll-behavior:smooth;scroll-padding-top:76px}
+body{margin:0;font:1rem/1.65 var(--fb);background:var(--bg);color:var(--fg);overflow-x:hidden;-webkit-font-smoothing:antialiased}
+a{color:var(--cy)}h1,h2,h3{line-height:1.08;margin:0 0 .5em;text-wrap:balance}h3{font-size:1.2rem}p{max-width:68ch}
+:focus-visible{outline:3px solid var(--cy);outline-offset:3px;border-radius:6px}
+.wrap{width:min(1200px,90%);margin:auto}section{padding:var(--sp) 0;position:relative}section:nth-of-type(even){background:var(--bg2);border-block:1px solid var(--bd)}
+.sr{position:absolute;left:-999px}.sr:focus{left:8px;top:8px;background:#fff;color:#000;padding:8px;z-index:99}
+h2{font-family:var(--fs);font-weight:500;font-size:clamp(2rem,5vw,3.6rem);letter-spacing:-.01em}
+.eyebrow{display:flex;align-items:center;gap:.7rem;color:var(--sf);letter-spacing:.16em;text-transform:uppercase;font-size:.75rem;font-weight:700;margin:0 0 1rem}.eyebrow::before{content:"";width:28px;height:2px;background:linear-gradient(90deg,var(--sf),var(--gr))}
+.lead{color:var(--mut);font-size:1.08rem}
+.glass{background:var(--card);border:1px solid var(--bd);border-radius:var(--r);box-shadow:var(--sh)}
+button,.btn{font:600 .95rem var(--fb);cursor:pointer;min-height:44px;padding:.6rem 1.3rem;border-radius:10px;border:1px solid var(--bd);background:var(--surf);color:var(--fg);text-decoration:none;display:inline-flex;align-items:center;gap:.5rem;transition:transform .25s var(--ease),border-color .25s,background .25s}
+button:hover,.btn:hover{transform:translateY(-2px);border-color:var(--cy)}button:active,.btn:active{transform:translateY(0) scale(.98)}button:disabled{opacity:.55;cursor:not-allowed}
+.pri{background:linear-gradient(135deg,#ff9933,#ffb457);color:#1b0d00;border:0;box-shadow:0 10px 24px -10px rgba(255,153,51,.7)}.sec2{border-color:var(--cy);color:var(--cy)}
+header{position:fixed;inset:0 0 auto;z-index:50;transition:background .3s,border-color .3s;padding-top:env(safe-area-inset-top);border-bottom:1px solid transparent}
+header.sc{background:color-mix(in srgb,var(--bg) 92%,transparent);backdrop-filter:blur(10px);border-bottom-color:var(--bd)}
+nav{display:flex;align-items:center;gap:.5rem;min-height:68px}
+.logo{display:flex;align-items:center;gap:.6rem;font-weight:800;letter-spacing:.12em;font-size:.9rem;text-decoration:none;color:var(--fg);margin-right:auto}.logo::before{content:"";width:22px;height:22px;border-radius:6px;background:conic-gradient(var(--sf) 0 33%,#fff 0 66%,var(--gr) 0);box-shadow:0 0 0 2px var(--bg),0 0 0 3px var(--bd)}.logo b{color:var(--sf)}
+.links{display:flex;gap:.1rem}.links a{color:var(--mut);text-decoration:none;padding:.5rem .65rem;font-size:.84rem;font-weight:600;position:relative;transition:color .2s}.links a:hover{color:var(--fg)}
+.links a.on{color:var(--fg)}.links a::after{content:"";position:absolute;left:.65rem;right:.65rem;bottom:2px;height:2px;background:linear-gradient(90deg,var(--sf),var(--cy));transform:scaleX(0);transform-origin:left;transition:transform .35s var(--ease)}.links a.on::after,.links a:hover::after{transform:scaleX(1)}
+.ib{padding:0;width:44px;justify-content:center}.ib svg{width:20px;height:20px;fill:none;stroke:currentColor;stroke-width:2;stroke-linecap:round}#menu{display:none}
+@media(max-width:1060px){#menu{display:inline-flex}.links{display:none;position:absolute;top:68px;left:0;right:0;flex-direction:column;background:var(--bg2);padding:.8rem 5%;border-bottom:1px solid var(--bd);max-height:calc(100svh - 68px);overflow:auto}.links.open{display:flex}.links a{padding:1rem .4rem;font-size:1.05rem;border-bottom:1px solid var(--bd)}.links a::after{display:none}.links a.on{color:var(--sf)}}
+#sbox{position:fixed;inset:76px 4% auto;max-width:580px;margin:auto;padding:1rem;z-index:60}#sbox[hidden]{display:none}
+#sbox input,.tools input{width:100%;padding:.8rem 1rem;border-radius:10px;border:1px solid var(--bd);background:var(--bg);color:var(--fg);font:inherit}
+#sres a{display:block;padding:.7rem;border-radius:8px;text-decoration:none;color:var(--fg)}#sres a:hover,#sres a:focus{background:var(--bg2)}
+#home{min-height:100svh;display:grid;align-items:center;padding:120px 0 90px;border:0;background:radial-gradient(55% 55% at 78% 35%,rgba(88,216,255,.16),transparent 70%),radial-gradient(40% 40% at 0 100%,rgba(255,153,51,.15),transparent),radial-gradient(35% 35% at 100% 100%,rgba(19,136,8,.2),transparent),var(--bg);overflow:hidden}
+#home::before{content:"";position:absolute;inset:0;background:linear-gradient(var(--bd) 1px,transparent 1px) 0 0/56px 56px,linear-gradient(90deg,var(--bd) 1px,transparent 1px) 0 0/56px 56px;opacity:.35;mask:radial-gradient(circle at 70% 40%,#000,transparent 72%)}
+.hg{display:grid;grid-template-columns:minmax(0,1.3fr) minmax(0,.7fr);gap:2rem;align-items:center;position:relative}
+h1{font-size:clamp(3.4rem,13vw,10rem);font-weight:900;letter-spacing:-.045em;line-height:.84;margin:0 0 1.2rem}h1 span{display:block}h1 span:first-child{color:var(--fg)}h1 span:last-child{background:linear-gradient(95deg,var(--sf) 0 35%,var(--fg) 52%,var(--gr) 90%);-webkit-background-clip:text;background-clip:text;color:transparent;padding-left:.12em}
+.tri{height:3px;width:120px;margin:1.2rem 0;background:linear-gradient(90deg,var(--sf) 33%,#fff 33% 66%,var(--gr) 66%)}
+.ctas{display:flex;flex-wrap:wrap;gap:.8rem;margin-top:1.8rem}
+#net{width:100%;height:auto;max-height:68vh;opacity:.95}.ln{stroke:var(--cy);stroke-opacity:.4;stroke-dasharray:3 7;animation:fl 8s linear infinite}
+.nd{fill:var(--cy)}.nd.s{fill:var(--sf)}.nd.g{fill:var(--gr)}.pulse{animation:pl 3.2s ease-in-out infinite;transform-box:fill-box;transform-origin:center}
+@keyframes fl{to{stroke-dashoffset:-100}}@keyframes pl{50%{transform:scale(1.7);opacity:.45}}
+.scroll{position:absolute;bottom:20px;left:5%;color:var(--mut);font-size:.72rem;letter-spacing:.2em;text-transform:uppercase;text-decoration:none;display:flex;gap:.7rem;align-items:center}.scroll i{display:block;width:44px;height:1px;background:var(--mut)}
+@media(max-width:860px){.hg{grid-template-columns:1fr}#net{max-height:260px;order:-1;opacity:.7}#home{padding-top:100px}.scroll{display:none}}
+.grid{display:grid;gap:1rem;grid-template-columns:repeat(auto-fill,minmax(min(100%,270px),1fr));grid-auto-flow:dense}
+#sg>.card:nth-child(5n+1){grid-column:span 2}@media(max-width:640px){#sg>.card:nth-child(5n+1){grid-column:auto}}
+.card{padding:1.5rem;transition:transform .35s var(--ease),border-color .3s;display:flex;flex-direction:column;gap:.55rem}.card:hover{transform:translateY(-4px);border-color:var(--cy)}
+#about-di .card{border-top:3px solid var(--sf);border-radius:4px 4px var(--r) var(--r)}#about-di .card:nth-child(2){border-top-color:var(--cy)}#about-di .card:nth-child(3){border-top-color:var(--gr)}
+.ico{width:44px;height:44px;border-radius:12px;display:grid;place-items:center;font-weight:800;background:var(--bg2);border:1px solid var(--cy);color:var(--cy)}
+svg.ico{display:block;padding:10px;fill:none;stroke:var(--cy);stroke-width:1.8;stroke-linecap:round;stroke-linejoin:round}
+.tag{font-size:.7rem;text-transform:uppercase;letter-spacing:.14em;color:var(--cy);font-weight:700}
+.tools{display:flex;flex-wrap:wrap;gap:.6rem;margin:1.5rem 0;align-items:center}.tools input{flex:1;min-width:220px;width:auto}#cats{display:flex;flex-wrap:wrap;gap:.4rem}
+button[aria-pressed=true]{background:var(--cy);color:#04121c;border-color:var(--cy)}
+.tip{font-size:.9rem;background:var(--bg2);padding:.7rem;border-radius:8px;border-left:3px solid var(--cy)}
+.note{font-size:.86rem;color:var(--mut);border-left:3px solid var(--sf);padding-left:.8rem}
+.ex{display:grid;grid-template-columns:1.15fr .85fr;gap:2rem;align-items:stretch}@media(max-width:860px){.ex{grid-template-columns:1fr}}
+#map{width:100%;height:auto;background:radial-gradient(circle at 50% 50%,rgba(88,216,255,.1),transparent 70%);border:1px solid var(--bd);border-radius:var(--r)}
+.rg{cursor:pointer;outline:none}.rg circle{fill:var(--bg2);stroke:var(--cy);stroke-width:2;transition:fill .25s,r .25s}.rg:hover circle,.rg:focus circle,.rg.on circle{fill:var(--cy)}.rg:focus circle{stroke:var(--sf);stroke-width:4}.rg text{fill:var(--fg);font-size:13px;font-weight:700;text-anchor:middle;pointer-events:none}.rg.on text,.rg:hover text,.rg:focus text{fill:#04121c}
+#rp{justify-content:center;border-left:4px solid var(--cy)}#rp h3{font-family:var(--fs);font-size:2rem;font-weight:500}
+.tl{display:flex;gap:0;overflow-x:auto;padding:2.2rem 0 1.5rem;scroll-snap-type:x mandatory;position:relative}
+.tl::before{content:"";position:absolute;left:0;right:0;top:2.2rem;height:2px;background:linear-gradient(90deg,var(--sf),var(--cy),var(--gr))}
+.tl button{flex:0 0 160px;flex-direction:column;align-items:flex-start;gap:.2rem;border:0;background:none;border-radius:0;scroll-snap-align:start;padding:1.4rem .6rem 0 0;position:relative;text-align:left}
+.tl button::before{content:"";position:absolute;top:-6px;left:0;width:14px;height:14px;border-radius:50%;background:var(--bg);border:3px solid var(--sf);transition:.3s}
+.tl button[aria-pressed=true]{background:none;color:var(--fg)}.tl button[aria-pressed=true]::before{background:var(--gr);border-color:var(--gr);transform:scale(1.4)}
+.tl b{font-family:var(--fs);font-size:2.2rem;font-weight:500;color:var(--sf);line-height:1}.tl button[aria-pressed=true] b{color:var(--gr)}
+#tlp{padding:2rem;min-height:150px;border-left:4px solid var(--sf)}#tlp h3{font-family:var(--fs);font-size:1.7rem;font-weight:500}
+@media(max-width:640px){.tl{flex-direction:column;overflow:visible;padding:0 0 1rem 1.4rem;scroll-snap-type:none}.tl::before{left:6px;right:auto;top:0;bottom:0;width:2px;height:auto;background:linear-gradient(var(--sf),var(--cy),var(--gr))}.tl button{flex:none;width:100%;flex-direction:row;align-items:baseline;gap:1rem;padding:.9rem 0}.tl button::before{top:1.3rem;left:-1.4rem}.tl b{font-size:1.6rem;min-width:4ch}}
+.bar{display:grid;grid-template-columns:100px 1fr 40px;gap:.7rem;align-items:center;margin:.6rem 0;font-size:.95rem}.bar i{display:block;height:100%;border-radius:4px;background:linear-gradient(90deg,var(--cy),var(--gr));width:0;transition:width 1.2s var(--ease)}
+.prog{height:10px;background:var(--bg2);border:1px solid var(--bd);border-radius:6px;overflow:hidden;margin:.8rem 0}.prog i{display:block;height:100%;background:linear-gradient(90deg,var(--sf),var(--cy),var(--gr));transition:width .5s var(--ease)}
+.demo{align-self:flex-start;background:transparent;border:1px dashed var(--sf);color:var(--sf);font-size:.68rem;font-weight:800;letter-spacing:.08em;padding:.15rem .5rem;border-radius:4px}
+#dash li{margin:.3rem 0;font-family:var(--fs);font-size:1.2rem}
+.opt{width:100%;justify-content:flex-start;margin:.35rem 0;text-align:left;font-weight:500;padding:.8rem 1.1rem}.opt.ok{background:rgba(60,196,90,.2);border-color:var(--gr)}.opt.no{background:rgba(255,100,100,.18);border-color:#ff7a7a}.opt.ok::after{content:"✔ Correct";margin-left:auto;font-size:.8rem}.opt.no::after{content:"✘ Your answer";margin-left:auto;font-size:.8rem}
+.fb{padding:.9rem 1rem;border-radius:10px;background:var(--bg2);border-left:3px solid var(--cy);margin:.7rem 0;animation:fi .4s var(--ease)}@keyframes fi{from{opacity:0;transform:translateY(8px)}}
+#qz{padding:clamp(1.4rem,4vw,2.6rem)}#qz h3{font-family:var(--fs);font-size:clamp(1.4rem,3vw,2rem);font-weight:500}
+#close{background:radial-gradient(60% 80% at 50% 100%,rgba(255,153,51,.14),transparent),var(--bg)}
+footer{border-top:1px solid var(--bd);padding:3rem 0;color:var(--mut);font-size:.9rem;background:var(--bg2)}
+#top{position:fixed;right:16px;bottom:16px;z-index:40;opacity:0;pointer-events:none;transition:opacity .3s}#top.v{opacity:1;pointer-events:auto}
+.rv{opacity:0;transform:translateY(22px);transition:opacity .8s var(--ease),transform .8s var(--ease)}.rv.in{opacity:1;transform:none}
+.pt{position:absolute;bottom:-10px;border-radius:50%;background:var(--cy);opacity:0;animation:up linear infinite;pointer-events:none}@keyframes up{10%{opacity:.6}100%{transform:translateY(-105vh);opacity:0}}
+#ms{width:100%;height:auto;margin:.5rem 0}#ms text{fill:var(--mut);font-size:9px;text-anchor:middle}#ms line{stroke:var(--cy)}#ms circle{fill:var(--sf)}
+@media(prefers-reduced-motion:reduce){.pt{display:none}*{animation:none!important;transition:none!important;scroll-behavior:auto!important}.rv{opacity:1;transform:none}}
+</style>
+<noscript><style>.rv{opacity:1!important;transform:none!important}</style></noscript>
+</head>
+<body>
+<a class="sr" href="#main">Skip to content</a>
+<header id="hd"><div class="wrap"><nav aria-label="Primary">
+<a class="logo" href="#home">DIGITAL <b>INDIA</b></a>
+<div class="links" id="links">
+<a href="#home">Home</a><a href="#about-di">Digital India</a><a href="#services">Services</a><a href="#journey">Journey</a><a href="#explore">Explore</a><a href="#safety">Cyber Safety</a><a href="#challenge">Challenge</a><a href="#about">About</a></div>
+<button class="ib" id="sbtn" aria-label="Search the site" aria-expanded="false"><svg viewBox="0 0 24 24" aria-hidden="true"><circle cx="11" cy="11" r="7"/><path d="M20 20l-4-4"/></svg></button>
+<button class="ib" id="theme" aria-label="Toggle light or dark theme"><svg viewBox="0 0 24 24" aria-hidden="true"><circle cx="12" cy="12" r="8"/><path d="M12 4v16" /></svg></button>
+<button class="ib" id="menu" aria-label="Open menu" aria-expanded="false" aria-controls="links"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M4 7h16M4 12h16M4 17h16"/></svg></button>
+</nav></div></header>
+<div id="sbox" class="glass" role="dialog" aria-label="Search" hidden>
+<input id="sin" type="search" placeholder="Search services, topics, sections…" aria-label="Search">
+<button id="sx" type="button" style="margin-top:.6rem">Close search</button><div id="sres" aria-live="polite"></div></div>
+
+<main id="main">
+<section id="home"><div class="wrap hg">
+<div><p class="eyebrow">India, reimagined — Power to Empower</p><h1><span>DIGITAL</span><span>INDIA</span></h1><div class="tri"></div>
+<p class="lead" style="font-size:1.2rem">Connecting people, empowering citizens and transforming a nation — one secure, inclusive digital step at a time.</p>
+<div class="ctas"><a class="btn pri" href="#about-di">Explore Digital India</a><a class="btn sec2" href="#challenge">Take the Digital India Challenge</a></div></div>
+<svg id="net" viewBox="0 0 400 400" role="img" aria-label="Animated network of glowing nodes connected by light trails, in saffron, cyan and green"><defs><linearGradient id="arc" x1="0" x2="1"><stop offset="0" stop-color="#ff9933"/><stop offset=".5" stop-color="#fff"/><stop offset="1" stop-color="#2fbf4a"/></linearGradient></defs>
+<circle cx="200" cy="200" r="170" fill="none" stroke="url(#arc)" stroke-width="2" opacity=".6"/><g id="netg"></g></svg>
+</div><a class="scroll" href="#about-di">Scroll<i></i></a></section>
+
+<section id="about-di"><div class="wrap rv"><p class="eyebrow">Digital India</p><h2>A nation, networked for people</h2>
+<p class="lead">Digital India is a flagship programme of the Government of India, launched on 1 July 2015, aiming to make government services available to citizens electronically and improve online infrastructure and connectivity.</p>
+<div class="grid" style="margin-top:2rem">
+<div class="glass card"><h3 style="color:var(--sf)">Digital Infrastructure</h3><p>Connectivity, digital identity and secure payments as shared public utilities.</p></div>
+<div class="glass card"><h3 style="color:var(--cy)">Governance on Demand</h3><p>Services that reach citizens online, reducing queues and paperwork.</p></div>
+<div class="glass card"><h3 style="color:var(--gr)">Digital Empowerment</h3><p>Digital literacy, learning and safety so everyone can participate confidently.</p></div></div></div></section>
+
+<section id="services"><div class="wrap rv"><p class="eyebrow">Digital Services Hub</p><h2>Explore the ecosystem</h2>
+<p class="note">Informational cards only. This site is independent and is not a government service. Never share Aadhaar numbers, OTPs, UPI PINs or passwords with any website you do not fully trust.</p>
+<div class="tools"><input id="q" type="search" placeholder="Search services…" aria-label="Search services"><span id="cats" role="group" aria-label="Filter by category"></span><button id="clr">Clear filters</button></div>
+<p id="cnt" aria-live="polite" class="lead"></p><div class="grid" id="sg"></div>
+<div id="empty" class="glass card" hidden><h3>No services match</h3><p>Try another word or clear the filters.</p></div></div></section>
+
+<section id="journey"><div class="wrap rv"><p class="eyebrow">India's Digital Journey</p><h2>Milestones that shaped a digital nation</h2>
+<div class="tl" id="tl" role="group" aria-label="Timeline milestones"></div><div class="glass" id="tlp" aria-live="polite"></div></div></section>
+
+<section id="explore"><div class="wrap rv"><p class="eyebrow">Regional Explorer</p><h2>Six regions, one digital story</h2>
+<p class="note">A schematic explorer, not a geographic map. Content is qualitative: it contains no state-level statistics or rankings.</p>
+<div class="ex" style="margin-top:1.5rem"><svg id="map" viewBox="0 0 400 360" role="group" aria-label="Regional explorer: choose a region"></svg><div class="glass card" id="rp" aria-live="polite"></div></div></div></section>
+
+<section id="dash"><div class="wrap rv"><p class="eyebrow">Dashboard</p><h2>Digital inclusion at a glance</h2>
+<div class="grid"><div class="glass card"><span class="demo">ILLUSTRATIVE DEMO DATA — NOT OFFICIAL</span><h3>Sample learning-goal mix</h3><div id="bars"></div>
+<p class="note" id="bartxt"></p></div>
+<div class="glass card"><span class="tag">Sourced facts (no live feed)</span><h3>Verified anchors</h3><ul><li>Digital India launched: 1 July 2015</li><li>UPI launched by NPCI: April 2016</li><li>5G services launched in India: 1 October 2022</li></ul>
+<svg id="ms" viewBox="0 0 320 70" role="img" aria-label="Milestone years on a line from 1987 to 2022: 1987, 1995, 2009, 2010, 2015, 2016, 2017, 2022"></svg>
+<p class="note">For current national figures, read the official dashboards: <a href="https://www.npci.org.in" target="_blank" rel="noopener noreferrer">NPCI</a>, <a href="https://digitalindia.gov.in" target="_blank" rel="noopener noreferrer">Digital India</a>. This page makes no live connection.</p></div></div></div></section>
+
+<section id="safety"><div class="wrap rv"><p class="eyebrow">Cyber Safety</p><h2>Stay one step ahead</h2>
+<div class="grid" id="sf"></div>
+<h3 style="margin-top:2.5rem">Spot the scam <span class="demo">FICTIONAL EXAMPLES</span></h3>
+<div class="glass card" id="ph" aria-live="polite"></div>
+<p class="note" style="margin-top:1rem">Report cybercrime at <a href="https://cybercrime.gov.in" target="_blank" rel="noopener noreferrer">cybercrime.gov.in</a> or call 1930 for financial fraud. In an emergency, call 112.</p></div></section>
+
+<section id="challenge"><div class="wrap rv"><p class="eyebrow">Knowledge Challenge</p><h2>Digital India Challenge</h2>
+<p class="note">Learning progress only — not an official certificate or government assessment.</p>
+<div class="glass card" id="qz" style="margin-top:1rem" aria-live="polite"></div></div></section>
+
+<section id="about"><div class="wrap rv"><p class="eyebrow">About</p><h2>Design narrative</h2>
+<p class="lead">Dark navy for the night-sky of networks, saffron and green as respectful accents, cyan for light moving through fibre. Everything is built with plain HTML, CSS and JavaScript, collects no personal data, and works offline. This is an independent educational project, not an official government website.</p></div></section>
+<section id="close"><div class="wrap rv glass" style="padding:clamp(2rem,6vw,4rem);text-align:center"><div class="tri" style="margin:0 auto 1rem"></div><h2>Power to Empower starts with you</h2>
+<p class="lead" style="margin:0 auto 1.5rem">Learn a service, spot a scam, teach someone nearby. A confident digital citizen strengthens the whole network.</p>
+<div class="ctas" style="justify-content:center"><a class="btn pri" href="#challenge">Test your knowledge</a><a class="btn sec2" href="#safety">Review cyber safety</a><a class="btn" href="#home">Back to the start</a></div></div></section>
+</main>
+<footer><div class="wrap"><strong>DIGITAL INDIA — Power to Empower</strong><p>Independent educational project. Official links open in a new tab. Stored locally only: theme and quiz best score.</p></div></footer>
+<button id="top" class="ib" aria-label="Back to top"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M12 19V5M6 11l6-6 6 6"/></svg></button>
+
+<script>
+(()=>{"use strict";
+const $=s=>document.querySelector(s),$$=s=>[...document.querySelectorAll(s)];
+const h=(t,a={},...k)=>{const e=document.createElement(t);for(const x in a)x==="text"?e.textContent=a[x]:e.setAttribute(x,a[x]);k.forEach(c=>e.append(c));return e};
+const S={get(k){try{return localStorage.getItem(k)}catch(e){return null}},set(k,v){try{localStorage.setItem(k,v)}catch(e){}}};
+const NS="http://www.w3.org/2000/svg",sv=(t,a={})=>{const e=document.createElementNS(NS,t);for(const x in a)e.setAttribute(x,a[x]);return e};
+/* theme */
+const root=document.documentElement;root.dataset.theme=S.get("di-theme")||(matchMedia("(prefers-color-scheme: light)").matches?"light":"dark");
+$("#theme").onclick=()=>{root.dataset.theme=root.dataset.theme==="dark"?"light":"dark";S.set("di-theme",root.dataset.theme)};
+/* nav */
+const hd=$("#hd"),top=$("#top"),links=$("#links");
+addEventListener("scroll",()=>{hd.classList.toggle("sc",scrollY>20);top.classList.toggle("v",scrollY>600)},{passive:true});
+top.onclick=()=>scrollTo({top:0});
+$("#menu").onclick=e=>{const o=links.classList.toggle("open");e.currentTarget.setAttribute("aria-expanded",o)};
+const cm=()=>{links.classList.remove("open");$("#menu").setAttribute("aria-expanded","false")};links.onclick=e=>{if(e.target.tagName==="A")cm()};
+if("IntersectionObserver"in window){
+ const io=new IntersectionObserver(es=>es.forEach(x=>{if(x.isIntersecting){const id=x.target.id;const M={dash:"explore",close:"about"},t="#"+(M[id]||id);$$(".links a").forEach(a=>{const on=a.getAttribute("href")===t;a.classList.toggle("on",on);on?a.setAttribute("aria-current","true"):a.removeAttribute("aria-current")})}}),{rootMargin:"-45% 0px -50% 0px"});
+ $$("section").forEach(s=>io.observe(s));
+ const rv=new IntersectionObserver(es=>es.forEach(x=>{if(x.isIntersecting){x.target.classList.add("in");rv.unobserve(x.target);if(x.target.querySelector("#bars"))bars()}}),{threshold:.1});
+ $$(".rv").forEach(e=>rv.observe(e));
+}else{$$(".rv").forEach(e=>e.classList.add("in"));setTimeout(()=>bars(),50)}
+/* hero network */
+(()=>{const g=$("#netg"),P=[];const c=["nd","nd s","nd g"];
+for(let i=0;i<22;i++){const a=i*2.4,r=30+((i*53)%140);P.push([200+r*Math.cos(a),200+r*Math.sin(a)])}
+P.forEach((p,i)=>{[1,3,7].forEach(d=>{const q=P[(i+d)%P.length];if(Math.hypot(p[0]-q[0],p[1]-q[1])<110)g.append(sv("line",{x1:p[0],y1:p[1],x2:q[0],y2:q[1],class:"ln"}))})});
+P.forEach((p,i)=>{const n=sv("circle",{cx:p[0],cy:p[1],r:i%5===0?5:3,class:c[i%3]+(i%4===0?" pulse":"")});n.style.animationDelay=(i*.3)+"s";g.append(n)})})();
+/* services */
+const IC={"₹":"M7 5h10M7 9h10M9 5c5 0 5 6 0 6H8l7 8","D":"M7 3h8l4 4v14H7zM15 3v4h4","U":"M4 4h7v7H4zM13 4h7v7h-7zM4 13h7v7H4zM13 13h7v7h-7z","A":"M12 3l8 3v6c0 5-4 8-8 9-4-1-8-4-8-9V6z","B":"M5 12a10 10 0 0114 0M8 15a6 6 0 018 0M12 19h.01","E":"M3 5h7a2 2 0 012 2v12a2 2 0 00-2-2H3zM21 5h-7a2 2 0 00-2 2v12a2 2 0 012-2h7z","H":"M12 5v14M5 12h14","P":"M3 10l9-6 9 6M5 10v9M19 10v9M9 19v-6M15 19v-6M3 19h18","ID":"M3 6h18v12H3zM13 10h5M13 14h4M8 10v.01M6 15c0-2 4-2 4 0","C":"M12 3a9 9 0 100 18 9 9 0 000-18zM8 12l3 3 5-6"};
+const ic=k=>{const e=sv("svg",{viewBox:"0 0 24 24",class:"ico","aria-hidden":"true"});e.append(sv("path",{d:IC[k]||IC.C}));return e};
+const SV=[["₹","UPI & Digital Payments","Payments","Instant bank-to-bank payments through a single mobile interface, run by NPCI.","https://www.npci.org.in","Never share your UPI PIN: you do not need it to receive money."],
+["D","DigiLocker","Identity","A government platform for storing and sharing verified digital documents.","https://www.digilocker.gov.in","Only sign in on the official digilocker.gov.in site or app."],
+["U","UMANG","Citizen Services","A unified app giving access to many central and state government services.","https://web.umang.gov.in","Download apps only from official stores and check the publisher."],
+["A","Aadhaar Services","Identity","UIDAI's resources for Aadhaar enrolment, updates and authentication.","https://uidai.gov.in","You can lock your biometrics through official UIDAI channels."],
+["B","BharatNet","Connectivity","A programme to bring broadband connectivity to villages across India.","https://digitalindia.gov.in","Learn about programmes on digitalindia.gov.in."],
+["E","Digital Education","Education","Free online courses through SWAYAM, a national learning platform.","https://swayam.gov.in","Check a course's provider before you enrol."],
+["H","Telemedicine & Digital Health","Health","eSanjeevani offers government telemedicine consultations.","https://esanjeevani.mohfw.gov.in","Teleconsults are not for emergencies: call 112."],
+["P","Government Portal","Citizen Services","India.gov.in is the National Portal, a gateway to government information.","https://www.india.gov.in","Look for .gov.in or .nic.in in website addresses."],
+["ID","Digital Identity & Authentication","Identity","Understand how verification works and how to protect your identity.","https://uidai.gov.in","Use masked Aadhaar copies when a full number is not required."],
+["C","Online Citizen Services","Citizen Services","Find official online services from certificates to bill payments.","https://www.india.gov.in","Never pay unofficial agents for free government forms."]];
+let cat="All";const CATS=["All",...new Set(SV.map(s=>s[2]))];
+const cb=$("#cats");CATS.forEach(c=>{const b=h("button",{type:"button","aria-pressed":c==="All",text:c});b.onclick=()=>{cat=c;$$("#cats button").forEach(x=>x.setAttribute("aria-pressed",x===b));rs()};cb.append(b)});
+function rs(){const q=$("#q").value.trim().toLowerCase(),g=$("#sg");g.textContent="";
+ const m=SV.filter(s=>(cat==="All"||s[2]===cat)&&(s[1]+s[3]+s[2]).toLowerCase().includes(q));
+ m.forEach(s=>{const tip=h("p",{class:"tip",text:s[5],hidden:""});const t=h("button",{type:"button","aria-expanded":"false",text:"Safety tip"});
+ t.onclick=()=>{tip.hidden=!tip.hidden;t.setAttribute("aria-expanded",!tip.hidden)};
+ g.append(h("article",{class:"glass card"},ic(s[0]),h("span",{class:"tag",text:s[2]}),h("h3",{text:s[1]}),h("p",{text:s[3]}),t,tip,h("a",{href:s[4],target:"_blank",rel:"noopener noreferrer",text:"Official site ↗"})))});
+ $("#empty").hidden=m.length>0;$("#cnt").textContent=m.length+" of "+SV.length+" services shown"}
+$("#q").oninput=rs;$("#clr").onclick=()=>{$("#q").value="";cat="All";$$("#cats button").forEach((x,i)=>x.setAttribute("aria-pressed",i===0));rs()};rs();
+/* timeline */
+const TL=[["1987","NICNET","The National Informatics Centre's NICNET network began linking government offices across the country."],["1995","Public Internet","VSNL launched public internet access in India on 15 August 1995."],["2009","UIDAI set up","The Unique Identification Authority of India was established in 2009 to issue unique identity numbers."],["2010","First Aadhaar","The first Aadhaar number was issued in September 2010 in Tembhli, Maharashtra."],["2015","Digital India","The Digital India programme was launched on 1 July 2015."],["2016","UPI","NPCI launched the Unified Payments Interface in April 2016; the Aadhaar Act was also passed that year."],["2017","UMANG","The UMANG app was launched in 2017 to bring many services onto one platform."],["2022","5G","5G services were launched in India on 1 October 2022."]];
+const tl=$("#tl"),tp=$("#tlp");
+function pick(i,b){$$("#tl button").forEach(x=>x.setAttribute("aria-pressed",x===b));tp.textContent="";tp.append(h("h3",{text:TL[i][0]+" — "+TL[i][1]}),h("p",{text:TL[i][2]}))}
+TL.forEach((t,i)=>{const b=h("button",{type:"button","aria-pressed":"false"},h("b",{text:t[0]}),h("span",{text:t[1]}));b.onclick=()=>pick(i,b);tl.append(b)});pick(4,tl.children[4]);
+/* explorer */
+const RG=[["North",90,70,"Mountains and plains","Mountain terrain makes connectivity harder, so digital tools like telemedicine and online learning can matter greatly. Explore SWAYAM and eSanjeevani."],["West",70,170,"Trade and fintech","Home to major trading hubs where digital payments are part of everyday commerce. Explore UPI."],["Central",190,160,"Heartland services","A region where online certificates and citizen services reduce travel to offices. Explore DigiLocker."],["East",300,150,"Rivers and coasts","Digital identity and public services help connect remote river and delta communities. Explore Aadhaar resources."],["Northeast",340,70,"Hills and diversity","Hilly geography makes broadband reach a priority theme. Explore BharatNet."],["South",200,280,"Technology talent","A well-known hub for technology skills, a good place to explore digital education. Explore SWAYAM."]];
+const mp=$("#map"),rp=$("#rp");
+function sel(i,g){$$(".rg").forEach(x=>x.classList.toggle("on",x===g));rp.textContent="";rp.append(h("span",{class:"tag",text:RG[i][3]}),h("h3",{text:RG[i][0]+" India"}),h("p",{text:RG[i][4]}),h("p",{class:"note",text:"Qualitative theme, not a statistic."}))}
+RG.forEach((r,i)=>{const g=sv("g",{class:"rg",tabindex:"0",role:"button","aria-label":"Explore "+r[0]+" India"});g.append(sv("circle",{cx:r[1],cy:r[2],r:42}));const t=sv("text",{x:r[1],y:r[2]+5});t.textContent=r[0];g.append(t);
+ g.onclick=()=>sel(i,g);g.onkeydown=e=>{if(e.key==="Enter"||e.key===" "){e.preventDefault();sel(i,g)}};mp.append(g)});
+sel(2,$$(".rg")[2]);
+/* dashboard (illustrative) */
+const BD=[["Payments",70],["Safety",85],["Identity",55],["Learning",65]];let bd=false;
+function bars(){if(bd)return;bd=true;const b=$("#bars");BD.forEach(d=>{const i=h("i");b.append(h("div",{class:"bar"},h("span",{text:d[0]}),h("div",{class:"prog",role:"img","aria-label":d[0]+" "+d[1]+" out of 100 (illustrative)"},i),h("span",{text:d[1]})));requestAnimationFrame(()=>requestAnimationFrame(()=>{i.style.width=d[1]+"%"}))});
+$("#bartxt").textContent="Text version of the chart (made-up demo scores): "+BD.map(d=>d[0]+" "+d[1]).join(", ")+"."}
+/* safety */
+const TP=[["Phishing","Scammers imitate banks and agencies. Don't trust urgency; contact the organisation via its official number."],["Suspicious links","Check the domain carefully. Government sites typically end in .gov.in or .nic.in. Type the address yourself."],["OTP & UPI PIN","No genuine bank or agency asks for your OTP or UPI PIN. A PIN is needed only to send money, never to receive it."],["Passwords","Use long, unique passphrases and a password manager."],["Two-factor","Turn on 2FA so a stolen password alone is not enough."],["Public Wi-Fi","Avoid banking on open Wi-Fi; prefer mobile data."],["Privacy","Share the minimum personal data, and review app permissions."],["Report","Report cybercrime at cybercrime.gov.in; call 1930 for financial fraud."]];
+const sf=$("#sf");TP.forEach(t=>sf.append(h("article",{class:"glass card"},h("h3",{text:t[0]}),h("p",{text:t[1]}))));
+const PH=[["“Your bank account will be blocked today. Click bit-ly-fake.example and enter your OTP.”",true,"Urgency, a shortened link and an OTP request are classic scam signs."],["“Your electricity bill is due. Pay via the official app you already use.”",false,"No link or secret is requested. Still, verify in the official app yourself."],["“Congratulations! Share your UPI PIN to receive ₹5,000.”",true,"A PIN is never needed to receive money. This is a scam."],["“Your parcel is held. Pay ₹20 at parcel-fee.example.”",true,"Unexpected fee links on unknown domains are a red flag."]];
+let pi=0;function ph(){const c=$("#ph");c.textContent="";if(pi>=PH.length){c.append(h("p",{text:"Done! Remember: never share OTPs or PINs, and verify independently."}));const r=h("button",{type:"button",text:"Try again"});r.onclick=()=>{pi=0;ph()};c.append(r);return}
+ const p=PH[pi],fb=h("p",{class:"fb",hidden:""});c.append(h("p",{text:"Message "+(pi+1)+"/"+PH.length+" (fictional)"}),h("blockquote",{text:p[0]}));
+ [["Scam",true],["Looks safe",false]].forEach(o=>{const b=h("button",{type:"button",text:o[0]});b.onclick=()=>{fb.hidden=false;fb.textContent=(o[1]===p[1]?"✔ Correct. ":"✘ Not quite. ")+p[2];$$("#ph button").forEach(x=>x.disabled=true);const n=h("button",{type:"button",text:"Next"});n.onclick=()=>{pi++;ph()};c.append(n);n.focus()};c.append(b)});c.append(fb)}ph();
+/* quiz */
+const Q=[["In which year was Digital India launched?",["2010","2015","2019","2022"],1,"It launched on 1 July 2015."],["Which organisation runs UPI?",["RBI","UIDAI","NPCI","NIC"],2,"UPI is developed and operated by NPCI."],["Which body issues Aadhaar numbers?",["UIDAI","NPCI","TRAI","SEBI"],0,"UIDAI is the Aadhaar authority."],["Do you need your UPI PIN to receive money?",["Yes","No","Only above ₹1,000","Only abroad"],1,"A PIN is for authorising payments you send, never to receive."],["Which national helpline is for cyber financial fraud?",["100","108","1930","1098"],2,"1930 is the National Cyber Crime helpline for financial fraud."],["Where can you report cybercrime online?",["cybercrime.gov.in","any social media","bank ATM","random forms"],0,"The official portal is cybercrime.gov.in."],["DigiLocker is mainly used to:",["Stream video","Store and share verified documents","Trade shares","Book cabs"],1,"It's a platform for digital documents."],["Two-factor authentication adds:",["Ads","A second proof of identity","Speed","Storage"],1,"2FA needs something beyond your password."],["A caller asks for your OTP to 'verify' your bank account. You should:",["Share it quickly","Hang up and call your bank","Share half","Text it"],1,"Banks never ask for OTPs. Hang up and use the official number."],["When did 5G services launch in India?",["2016","2018","2022","2025"],2,"5G was launched on 1 October 2022."],["What does BharatNet aim to provide?",["Rural broadband","Cricket scores","Train tickets","Taxes"],0,"It aims to extend broadband to villages."],["Which domain is typical for Indian government websites?",[".gov.in",".win",".xyz",".fake"],0,"Official sites use .gov.in or .nic.in."]];
+let qi=0,sc=0,done=false,started=false;const qz=$("#qz");
+function qs(){qz.textContent="";if(!started){qz.append(h("p",{class:"tag",text:"Knowledge challenge"}),h("h3",{text:Q.length+" questions. About five minutes."}),h("p",{class:"lead",text:"Covers digital services, India's digital milestones and staying safe online. You see an explanation after every answer."}));const g=h("button",{type:"button",class:"pri",text:"Start the challenge"});g.onclick=()=>{started=true;qs()};qz.append(g);return}if(qi>=Q.length){const best=Math.max(+S.get("di-best")||0,sc);S.set("di-best",best);qz.append(h("h3",{text:"Score: "+sc+" / "+Q.length}),h("p",{text:sc>=10?"Excellent digital awareness!":sc>=6?"Good progress, keep learning.":"A great start. Review the sections above and try again."}),h("p",{class:"note",text:"Best score on this device: "+best+" / "+Q.length+". Learning progress only; not an official certificate."}));const r=h("button",{type:"button",class:"pri",text:"Restart"});r.onclick=()=>{qi=0;sc=0;qs()};qz.append(r);r.focus();return}
+ const q=Q[qi];done=false;const fb=h("div",{class:"fb",hidden:""}),nx=h("button",{type:"button",text:qi===Q.length-1?"See results":"Next",hidden:""});
+ qz.append(h("p",{text:"Question "+(qi+1)+" of "+Q.length+" · Score "+sc}),h("div",{class:"prog"},h("i",{style:"width:"+(qi/Q.length*100)+"%"})),h("h3",{text:q[0]}));
+ q[1].forEach((o,i)=>{const b=h("button",{type:"button",class:"opt",text:o});b.onclick=()=>{if(done)return;done=true;if(i===q[2]){sc++;b.classList.add("ok")}else{b.classList.add("no");$$(".opt")[q[2]].classList.add("ok")}fb.hidden=false;fb.textContent=(i===q[2]?"✔ Correct. ":"✘ Incorrect. ")+q[3];nx.hidden=false;nx.focus()};qz.append(b)});
+ nx.onclick=()=>{qi++;qs()};qz.append(fb,nx)}qs();
+/* search */
+const IDX=[["Home","#home"],["Digital India","#about-di"],["Services","#services"],["Journey / timeline","#journey"],["Explore regions","#explore"],["Dashboard","#dash"],["Cyber safety","#safety"],["Quiz challenge","#challenge"],["About","#about"],...SV.map(s=>[s[1],"#services"]),...TP.map(t=>[t[0],"#safety"])];
+const sb=$("#sbox"),si=$("#sin"),sr=$("#sres");
+function sh(open){sb.hidden=!open;$("#sbtn").setAttribute("aria-expanded",open);if(open){si.focus();ss()}}
+function ss(){const q=si.value.trim().toLowerCase();sr.textContent="";const m=IDX.filter(x=>x[0].toLowerCase().includes(q)).slice(0,8);
+ if(!m.length)sr.append(h("p",{text:"No results found."}));m.forEach(x=>{const a=h("a",{href:x[1],text:x[0]});a.onclick=()=>{sh(false);if(x[1]==="#services"&&x[0]!=="Services"){$("#q").value=x[0];cat="All";$$("#cats button").forEach((b,i)=>b.setAttribute("aria-pressed",i===0));rs()}};sr.append(a)})}
+$("#sbtn").onclick=()=>sh(sb.hidden);si.oninput=ss;
+addEventListener("keydown",e=>{if(e.key==="Escape"){if(!sb.hidden){sh(false);$("#sbtn").focus()}if(links.classList.contains("open")){cm();$("#menu").focus()}}});
+$("#sx").onclick=()=>{sh(false);$("#sbtn").focus()};
+addEventListener("click",e=>{if(!sb.hidden&&!sb.contains(e.target)&&!$("#sbtn").contains(e.target))sh(false)});
+/* ambient particles */
+try{const hm=$("#home");for(let i=0;i<14;i++){const p=h("span",{class:"pt","aria-hidden":"true"}),z=2+(i%3);p.style.cssText="left:"+((i*37)%100)+"%;width:"+z+"px;height:"+z+"px;animation-duration:"+(9+(i%5)*3)+"s;animation-delay:"+(i*.9)+"s";hm.append(p)}}catch(e){}
+/* milestone year chart (sourced years from timeline data) */
+try{const m=$("#ms");m.append(sv("line",{x1:15,y1:30,x2:305,y2:30,"stroke-width":2}));
+TL.forEach((t,i)=>{const x=15+(t[0]-1987)/(2022-1987)*290,y=i%2?18:30;m.append(sv("circle",{cx:x,cy:30,r:4}));const tx=sv("text",{x:x,y:i%2?52:20});tx.textContent=t[0];m.append(tx)})}catch(e){}
+})();
+</script>
+</body>
+</html>
